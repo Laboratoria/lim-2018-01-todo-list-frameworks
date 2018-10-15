@@ -1,12 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import TodoList from "./TodoList";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+var destination = document.querySelector("#container");
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+	<div>
+	<h2> Hoy prepararemos una deliciosa receta</h2>
+	<h4> Por favor añade los ingredientes que necesitaremos, </h4>
+	<h4> Haz clic en un ingrediente registrado y éste se eliminará </h4>
+		<TodoList/>
+	</div>,	
+destination
+);
